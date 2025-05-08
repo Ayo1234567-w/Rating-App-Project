@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Rating Component</title>
+  </head>
+  <body class="bg-gray-900 text-white m-0 min-h-screen flex items-center justify-center">
+    
+    <!-- Rating Card -->
+    <div id="rating-card" class="bg-gray-800 rounded-xl p-6 w-80 shadow-lg text-white">
+      <!-- Star Icon -->
+      <div class="text-yellow-400 text-2xl mb-6">★</div>
+
+      <!-- Title -->
+      <h2 class="text-lg font-semibold mb-2">How did we do?</h2>
+
+      <!-- Description -->
+      <p class="text-gray-400 text-sm mb-4">
+        Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!
+      </p>
+
+      <!-- Rating Buttons -->
+      <div class="flex justify-between mb-4" role="radiogroup" aria-label="Rating-options">
+        <button class="rating-btn w-10 h-10 rounded-full bg-gray-700 text-gray-300 hover:bg-white hover:text-black" data-value="1">1</button>
+        <button class="rating-btn w-10 h-10 rounded-full bg-gray-700 text-gray-300 hover:bg-white hover:text-black" data-value="2">2</button>
+        <button class="rating-btn w-10 h-10 rounded-full bg-gray-700 text-gray-300 hover:bg-white hover:text-black" data-value="3">3</button>
+        <button class="rating-btn w-10 h-10 rounded-full bg-gray-700 text-gray-300 hover:bg-white hover:text-black" data-value="4">4</button>
+        <button class="rating-btn w-10 h-10 rounded-full bg-gray-700 text-gray-300 hover:bg-white hover:text-black" data-value="5">5</button>
+      </div>
+
+      <p id="error-msg" class="text-red-500 text-sm mb-2 hidden" role="alert">Please select a rating.</p>
+
+      <!-- Submit Button -->
+      <button id="submit-btn" class="bg-orange-500 hover:bg-orange-600 w-full py-2 rounded-xl text-white font-semibold">
+        Submit
+      </button>
+    </div>
+
+    <!-- Thank You Card -->
+    <div id="thankyou-card" class="hidden bg-gray-800 p-6 rounded-xl w-80 shadow-md text-center">
+      <img src="Assets/illustration-thank-you.svg" alt="Thank you" class="mx-auto mb-5" />
+      <p id="selected-rating-text" class="text-sm text-orange-400 mb-4 bg-gray-950 inline-block px-4 py-1 rounded-full">
+        You selected 3 out of 5
+      </p>
+      <h2 class="text-xl font-semibold mb-2">Thank you!</h2>
+      <p class="text-sm text-gray-400 mb-4">
+        We appreciate you taking the time to give a rating. If you ever need more support, don't hesitate to get in touch!
+      </p>
+      <button id="rate-again-btn" class="font-semibold text-orange-400 underline hover:text-orange-300">
+        Rate Again
+      </button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
